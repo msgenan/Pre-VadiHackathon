@@ -1,1 +1,0 @@
-# Pre-Hackathon Projesi
