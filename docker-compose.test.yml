@@ -1,0 +1,14 @@
+services:
+  test-runner:
+    build:
+      context: ./tests/test-runner
+    depends_on:
+      backend:
+        condition: service_healthy
+      db:
+        condition: service_healthy
+    volumes:
+      - ./backend:/backend
+      - ./frontend:/frontend
+      - ./tests:/tests
+    restart: "no"
